@@ -1,0 +1,25 @@
+<?php
+return [
+    
+    'provider' => getenv('AI_PROVIDER') ?: 'elevenlabs',
+    'api_key' => getenv('AI_API_KEY') ?: 'sk_e5e6798139bb9319d722144506f79642f42c36d62fc9c8d1',
+    'model' => getenv('AI_MODEL') ?: 'gemini-2.5-flash-lite',
+    'elevenlabs_voice_id' => getenv('ELEVENLABS_VOICE_ID') ?: 'JBFqnCBsd6RMkjVDRZzb',
+    'elevenlabs_model' => getenv('ELEVENLABS_MODEL') ?: 'eleven_multilingual_v2',
+    'elevenlabs_output_format' => getenv('ELEVENLABS_OUTPUT_FORMAT') ?: 'mp3_44100_128',
+    'runway_api_key' => getenv('RUNWAYML_API_SECRET') ?: 'key_1e78bcd125f095c41e7732d9af92361cef822e94d6e16fbf9492e1621b380a9584eb289b7ea1d09c9432a394a2f1637c95ae2db694cef7646d5bd83d6ad48b50',
+    'runway_model' => getenv('RUNWAY_MODEL') ?: 'gen4.5',
+    'runway_ratio' => getenv('RUNWAY_RATIO') ?: '1280:720',
+    'runway_duration' => (int) (getenv('RUNWAY_DURATION') ?: 5),
+    'runway_version' => getenv('RUNWAY_VERSION') ?: '2024-11-06',
+    'minimax_api_key' => getenv('MINIMAX_API_KEY') ?: 'sk-api-yvCGOadWzzYppLj9gW7VvOsqsl929UaikUAHgBHSjHXP3zdDJeWz9RIW8ZxxFQ3Mht1opLEuV75cLV5vqkgir_tY97qtf3Ww4efrV1onIwOO8019dmK86hM',
+    'minimax_model' => getenv('MINIMAX_MODEL') ?: 'MiniMax-Hailuo-2.3',
+    'minimax_resolution' => getenv('MINIMAX_RESOLUTION') ?: '1080P',
+    'minimax_duration' => (int) (getenv('MINIMAX_DURATION') ?: 6),
+    'did_api_key' => getenv('DID_API_KEY') ?: 'YWxlamFuZHJvdG92YXIwNTExQGdtYWlsLmNvbQ:EDv-w7FmHlSvcx_FB6RaR',
+    'did_source_url' => getenv('DID_SOURCE_URL') ?: 'https://create-images-results.d-id.com/DefaultPresenters/Noelle_f/image.png',
+    'did_voice_id' => getenv('DID_VOICE_ID') ?: 'es-CO-SalomeNeural',
+    'timeout' => 45,
+    'video_poll_attempts' => 18,
+    'video_poll_seconds' => 10,
+];

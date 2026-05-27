@@ -1,0 +1,1228 @@
+/* ==========================================================================
+   ESTILOS TUTORVIDEOS - V17 MODERNO Y ORGANIZADO
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #003366;
+    --primary-light: #004a8f;
+    --secondary: #d4af37;
+    --bg: #f5f7fb;
+    --white: #ffffff;
+    --text: #1e293b;
+    --text-soft: #475569;
+    --border: #e2e8f0;
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-pill: 50px;
+    --shadow: 0 6px 20px rgba(15, 23, 42, .06);
+    --shadow-hover: 0 16px 32px rgba(0, 51, 102, .12);
+}
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   HEADER LIMPIO Y ALINEADO
+   ========================================================== */
+
+header {
+
+    background: linear-gradient(135deg, #003366, #004a8f);
+    border-bottom: 5px solid #d4af37;
+
+    padding: 2rem 3rem;
+
+    display: grid;
+    grid-template-columns: 160px minmax(300px, 1fr) 260px;
+
+    align-items: center;
+
+    gap: 2rem;
+    min-height: 220px;
+
+}
+
+/* LOGO */
+
+.confirm-row {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.confirm-logo-img {
+
+    width: 95px;
+    height: auto;
+
+}
+
+/* TEXTO CENTRO */
+
+.text-center-header {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.text-center-header h1 {
+
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    margin-bottom: .5rem;
+
+}
+
+.text-center-header p {
+
+    color: rgba(255,255,255,.92);
+    font-size: 1rem;
+
+}
+
+/* TOOLS DERECHA */
+
+.accessibility-tools {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    align-items: flex-end;
+    height: 100%;
+
+}
+
+/* IDIOMA */
+
+.language-selector {
+
+    display: flex;
+    align-items: center;
+
+    gap: .8rem;
+
+}
+
+.language-selector label {
+
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+
+    margin: 0;
+
+}
+
+.language-selector select {
+
+    background: rgba(255,255,255,.12);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 14px;
+
+    padding: .8rem 1rem;
+
+    min-width: 140px;
+
+}
+
+/* BOTÓN */
+
+.theme-btn {
+
+    width: 220px;
+
+    background: rgba(255,255,255,.12) !important;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    border-radius: 14px !important;
+
+    color: white;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media(max-width:900px){
+
+    header{
+
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+
+    .confirm-row{
+
+        justify-content: center;
+
+    }
+
+    .accessibility-tools{
+
+        align-items: center;
+
+    }
+
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+nav {
+    background: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .8rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: .8rem 1.4rem;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+nav a:hover {
+    background: #eef4ff;
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white !important;
+}
+
+/* ==========================================================================
+   SECCIONES
+   ========================================================================== */
+
+section {
+    max-width: 1150px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+section h1 {
+    color: var(--primary);
+    margin-bottom: .7rem;
+    font-size: 2rem;
+}
+
+section h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-left: 6px solid var(--secondary);
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
+
+section p {
+    color: var(--text-soft);
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+
+.card {
+    background: white;
+    border-radius: 22px;
+    border: 1px solid #edf2f7;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .04);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: .35s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(212, 175, 55, .5);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: .8rem;
+    font-size: 1.15rem;
+}
+
+.card p {
+    color: #475569;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+.tag {
+    display: inline-block;
+    width: max-content;
+    background: rgba(212, 175, 55, .15);
+    color: #b88900;
+    font-size: .75rem;
+    font-weight: 700;
+    padding: .45rem .9rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   BOTONES
+   ========================================================================== */
+
+button,
+.btn,
+input[type="submit"],
+input[type="reset"] {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+
+    background: var(--primary);
+    color: white;
+
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: .9rem;
+
+    transition: .3s ease;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* ==========================================================================
+   CTA
+   ========================================================================== */
+
+.cta {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+/* ==========================================================================
+   FORMULARIOS
+   ========================================================================== */
+
+form {
+    margin-top: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-block {
+    margin-top: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .6rem;
+    font-size: .85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    background: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+    font-size: .95rem;
+    transition: .3s ease;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, .15);
+}
+
+::placeholder {
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.faq-grid .card {
+    padding: 1.4rem;
+    min-height: auto;
+}
+
+.faq-grid .card h3 {
+    margin-bottom: .7rem;
+}
+
+.faq-grid .card p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   INFO BOX
+   ========================================================================== */
+
+.info {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.info h3 {
+    margin-bottom: 1rem;
+}
+
+.info ul {
+    margin-top: 1rem;
+    padding-left: 1.3rem;
+}
+
+.info li {
+    margin-bottom: .8rem;
+}
+
+/* ==========================================================================
+   TABLAS ADMIN
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+table th {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-size: .9rem;
+}
+
+table td {
+    padding: 1rem;
+    border-bottom: 1px solid #edf2f7;
+    color: #475569;
+}
+
+table tr:hover {
+    background: #f8fafc;
+}
+
+table a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   ESTADÍSTICAS ADMIN
+   ========================================================================== */
+
+.stats,
+.course-stats,
+.charts,
+.danger-zone {
+    margin-top: 3rem;
+}
+
+.course-stats h2,
+.stats h2,
+.charts h2,
+.danger-zone h2 {
+    margin-bottom: 2rem;
+}
+
+.course-stats .grid {
+    gap: 1rem;
+}
+
+.course-stats .card {
+    min-height: 160px;
+    padding: 1.4rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.course-stats .card h3 {
+    margin-bottom: .6rem;
+    font-size: 1rem;
+}
+
+.stat,
+.metric {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.change {
+    margin-top: .7rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.positive {
+    color: #16a34a;
+}
+
+.neutral {
+    color: #64748b;
+}
+
+/* ==========================================================================
+   REPORTES
+   ========================================================================== */
+
+.report-filters {
+    margin-top: 2rem;
+}
+
+.report-filters form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.chart-placeholder {
+    margin-top: 1.5rem;
+    min-height: 260px;
+    border-radius: 20px;
+    border: 2px dashed #cbd5e1;
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+    text-align: center;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   SEARCH
+   ========================================================================== */
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* ==========================================================================
+   ACTIONS
+   ========================================================================== */
+
+.actions,
+.export,
+.logout-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* ==========================================================================
+   PAGINACION
+   ========================================================================== */
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   ZONA PELIGRO
+   ========================================================================== */
+
+.danger-zone {
+    background: #fef2f2;
+    border: 2px solid rgba(220, 38, 38, .15);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.danger-zone p {
+    color: #991b1b;
+    margin-bottom: 1.5rem;
+}
+
+.btn.danger {
+    background: #dc2626;
+}
+
+.btn.danger:hover {
+    background: #b91c1c;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 4rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width:768px) {
+
+    header {
+        padding-top: 6rem;
+    }
+
+    .text-center-header h1 {
+        font-size: 1.9rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .cta,
+    .actions,
+    .export,
+    .search-form,
+    .logout-buttons,
+    .report-filters form {
+        flex-direction: column;
+    }
+
+    .cta .btn,
+    .actions .btn,
+    .export .btn,
+    .logout-buttons .btn,
+    button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat,
+    .metric {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================================================
+   CONFIGURACIÓN ADMIN - MÁS ESPACIO
+   ========================================================================== */
+
+.form-grid {
+    margin-bottom: 1rem;
+}
+
+/* Bloques individuales */
+.form-grid>div {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+/* Más separación entre grupos */
+.form-block {
+    margin: 1rem 0;
+}
+
+/* Separar botones finales */
+form button,
+form input[type="reset"] {
+    margin-top: 1rem;
+}
+
+/* Separación extra para selects */
+select {
+    margin-bottom: .5rem;
+}
+
+.language-selector select {
+
+    background: rgba(255, 255, 255, .12);
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    padding: .85rem 1.2rem;
+
+    border-radius: 16px;
+
+    min-width: 150px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(12px);
+
+    transition: .25s;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, .12);
+
+}
+
+.language-selector select:hover {
+
+    background: rgba(255, 255, 255, .18);
+
+}
+
+.language-selector select:focus {
+
+    outline: none;
+
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 4px rgba(212, 175, 55, .2);
+
+}
+
+/* Opciones select */
+
+.language-selector option {
+
+    color: #1e293b;
+
+}
+
+
+.theme-btn:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        rgba(255, 255, 255, .22) !important;
+
+}
+
+
+/* ==========================================================
+   ACCESIBILIDAD Y USABILIDAD
+   ========================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.8;
+}
+
+::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+/* Navegación teclado */
+
+button:focus-visible,
+.btn:focus-visible,
+nav a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+
+    outline: 3px solid var(--secondary);
+
+    outline-offset: 3px;
+
+    box-shadow:
+        0 0 0 5px rgba(212, 175, 55, .18);
+
+}
+
+/* Hover + teclado */
+
+nav a:hover,
+nav a:focus-visible {
+
+    background: #eef4ff;
+
+    color: var(--primary);
+
+}
+
+button:hover,
+button:focus-visible,
+.btn:hover,
+.btn:focus-visible,
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible,
+input[type="reset"]:hover,
+input[type="reset"]:focus-visible {
+
+    background: var(--primary-light);
+
+}
+
+/* Áreas táctiles */
+
+button,
+.btn,
+nav a,
+input[type="submit"],
+input[type="reset"] {
+
+    min-height: 44px;
+
+    min-width: 44px;
+
+}
+
+.language-selector select {
+
+    width: auto;
+    min-width: 140px;
+
+}
+
+/* Formularios */
+
+input,
+select,
+textarea {
+
+    line-height: 1.5;
+
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+
+    border-color: #dc2626;
+
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+
+    border-color: #16a34a;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #2563eb;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, .2);
+
+}
+
+/* Imágenes responsive */
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+/* Tablas */
+
+table {
+
+    line-height: 1.7;
+
+}
+
+table tr:focus-within {
+
+    background: #eef4ff;
+
+}
+
+/* Enlaces */
+
+a {
+
+    text-underline-offset: 3px;
+
+}
+
+a:hover {
+
+    text-decoration-thickness: 2px;
+
+}
+
+/* Estados no solo color */
+
+.positive {
+
+    font-weight: 700;
+
+}
+
+.positive::before {
+
+    content: "✓ ";
+
+}
+
+.neutral {
+
+    font-weight: 600;
+
+}
+
+.neutral::before {
+
+    content: "• ";
+
+}
+
+/* Texto seleccionado */
+
+::selection {
+
+    background: #d4af37;
+
+    color: black;
+
+}
+
+/* Movimiento reducido */
+
+@media(prefers-reduced-motion:reduce) {
+
+    * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+    .card:hover {
+
+        transform: none;
+
+    }
+
+}
+
+/* Alto contraste */
+
+@media(prefers-contrast:more) {
+
+    :root {
+
+        --text: #000;
+
+        --text-soft: #222;
+
+        --border: #000;
+
+        --primary: #002855;
+
+        --secondary: #8a6800;
+
+    }
+
+    button,
+    .btn {
+
+        border: 2px solid black;
+
+    }
+
+    input,
+    select,
+    textarea {
+
+        border: 2px solid black;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    nav a {
+
+        width: 100%;
+        text-align: center;
+
+    }
+
+}
+
+/* ---------- BOTON FLOTANTE ACCESIBILIDAD ---------- */
+
+.accessibility-float{
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 5px solid var(--secondary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.18);
+
+    z-index: 9999;
+
+    transition: .3s ease;
+}
+
+.accessibility-float:hover{
+    transform: scale(1.08);
+    box-shadow: 0 14px 30px rgba(0,0,0,.25);
+}
+
+/* ======================================================================
+   FOOTER PROFESIONAL
+   ====================================================================== */
+
+.main-footer{
+    background: #001f3f;
+    color: white;
+
+    margin-top: 4rem;
+
+    padding-top: 3rem;
+}
+
+.footer-grid{
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 2rem 3rem;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px,1fr));
+
+    gap: 2.5rem;
+}
+
+.main-footer h3,
+.main-footer h4{
+    margin-bottom: 1rem;
+
+    color: white;
+}
+
+.main-footer p{
+    color: rgba(255,255,255,.75);
+
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-social{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a,
+.footer-social a{
+    color: rgba(255,255,255,.75);
+
+    text-decoration: none;
+
+    margin-bottom: .8rem;
+
+    transition: .3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+    color: var(--secondary);
+}
+
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    text-align: center;
+
+    padding: 1.5rem;
+
+    font-size: .9rem;
+
+    color: rgba(255,255,255,.65);
+}
